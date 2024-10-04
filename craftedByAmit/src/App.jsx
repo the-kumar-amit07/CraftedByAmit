@@ -2,11 +2,10 @@
 import { useEffect } from "react";
 import "./App.css";
 // import MyPhoto from "./assets/MyPhoto.png";
-import Laptop from "./assets/apple macbook pro laptop mockup.png";
-import quirknest from "./assets/screencapture QuirkNest.png";
-import timetracer from "./assets/screencapture TimeTracer.png";
+
 import downArrow from "./assets/down-arrow.png";
 import { Button, IntroText } from "./components";
+import ProjectPage from "./pages/ProjectPage";
 
 function App() {
   useEffect(() => {
@@ -50,6 +49,7 @@ function App() {
   return (
     <>
       <div className="bg-[#72d2bb] overflow-x-hidden overflow-hidden font-montserrat">
+        {/* NavBar */}
         <div></div>
         {/* Introduction */}
         <div className="h-screen flex flex-col justify-center mt-36 gap-28 items-center">
@@ -77,52 +77,8 @@ function App() {
         </div>
       </div>
       {/*Projects*/}
-      <div className="flex flex-col bg-[#f0f4f9] gap-[30vw] px-[100px] projects">
-        <h2 className="text-[10vw] text-gray-500 projectTitle">
-          Here are my recent projects
-        </h2>
-        {/* Project One */}
-        <div className="h-screen  flex items-center gap-[100px] flex-col lg:flex-row ">
-          <div className="relative flex-1 w-[300px] h-[600px] laptopOne">
-            <img src={Laptop} alt="project_one" />
-            <div className="absolute top-[135px] left-[105px] w-[438px] h-[275px] overflow-scroll laptopScreen ">
-              <img src={quirknest} alt="" className="w-full" />
-            </div>
-          </div>
-          {/* projectDetail */}
-          <div className="flex-1 flex flex-col gap-12 items-center">
-            <h1 className="text-[7vw] text-gray-500">QuikNest</h1>
-            <p className="text-gray-500 text-base text-justify leading-10">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia
-              debitis, aspernatur consequatur distinctio, aliquam recusandae
-              voluptate quasi quam a reprehenderit voluptatibus. Id similique
-              nulla optio at aliquam impedit recusandae! Porro.
-            </p>
-            {/* Button */}
-            <Button>View Project</Button>
-          </div>
-        </div>
-        {/* Project Two */}
-        <div className="h-screen flex items-center gap-[100px] flex-col lg:flex-row-reverse ">
-          <div className="relative flex-1 w-[300px] h-[600px] laptopTwo">
-            <img src={Laptop} alt="project_one" />
-            <div className="absolute top-[135px] left-[105px] w-[438px] h-[275px] overflow-scroll">
-              <img src={timetracer} alt="" className="w-full" />
-            </div>
-          </div>
-          {/* projectDetail */}
-          <div className="flex-1 flex flex-col gap-12 items-center">
-            <h1 className="text-[7vw] text-gray-500">TimeTracer</h1>
-            <p className="text-gray-500 text-base text-justify leading-10">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia
-              debitis, aspernatur consequatur distinctio, aliquam recusandae
-              voluptate quasi quam a reprehenderit voluptatibus. Id similique
-              nulla optio at aliquam impedit recusandae! Porro.
-            </p>
-            {/* Button */}
-            <Button>View Project</Button>
-          </div>
-        </div>
+      <div className="">
+        <ProjectPage/>
       </div>
     </>
   );
