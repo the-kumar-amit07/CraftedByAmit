@@ -5,3 +5,10 @@
     }
     
 }
+
+.box{
+    position: relative;
+    height:50% ;
+    width: 100%;
+    background-color: #f0f0f0;
+}

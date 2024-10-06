@@ -14,6 +14,7 @@ export default {
       backgroundImage: {
         'custom-bg1': "url('./src/assets/abstract-black-line-contour-pattern-white-background-wallpaper_34959020.png')",
         'custom-bg2': "url('./src/assets/abstract-black-line-contour-pattern2-white-background-wallpaper_34959020 copy.png')",
+        'myImage' : "url('./src/assets/MyPhoto.png')"
       },
       lineHeight: {
         '0': '0',

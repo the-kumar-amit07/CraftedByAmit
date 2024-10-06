@@ -7,9 +7,9 @@ import { Button } from "../components";
 
 function ProjectPage() {
     return (
-        <div className="flex flex-col bg-[#f0f4f9] gap-[30vw] projects">
-        <h2 className="text-[10vw] text-gray-500 p-7  projectTitle">
-            Here are my recent projects
+        <div id="projects" className="flex flex-col bg-[#f0f4f9] gap-[30vw] projects">
+        <h2 className="text-[10vw] text-gray-500 p-7 font-oswald  projectTitle">
+            Here Are My Recent Projects
         </h2>
         {/* Project One */}
         <div className="h-screen flex items-center justify-center gap-7 flex-col lg:flex-row project">
@@ -21,7 +21,7 @@ function ProjectPage() {
             </div>
             {/* projectDetail */}
             <div className="flex-1 flex flex-col p-7 gap-12 items-center">
-            <h1 className="text-[7vw] text-gray-500">QuikNest</h1>
+            <h1 className="text-[7vw] text-gray-500">QuirkNest</h1>
             <p className="text-gray-500 text-base text-justify leading-10">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia
                 debitis, aspernatur consequatur distinctio, aliquam recusandae
@@ -44,7 +44,7 @@ function ProjectPage() {
             </div>
             {/* projectDetail */}
             <div className="flex-1 flex flex-col p-7 gap-12 items-center">
-            <h1 className="text-[7vw] text-gray-500">QuikNest</h1>
+            <h1 className="text-[7vw] text-gray-500">TimeTracer</h1>
             <p className="text-gray-500 text-base text-justify leading-10">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia
                 debitis, aspernatur consequatur distinctio, aliquam recusandae

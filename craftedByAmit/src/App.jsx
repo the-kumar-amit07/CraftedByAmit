@@ -1,13 +1,41 @@
 /* eslint-disable no-unused-vars */
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.css";
 // import MyPhoto from "./assets/MyPhoto.png";
-
-import downArrow from "./assets/down-arrow.png";
-import { Button, IntroText } from "./components";
-import ProjectPage from "./pages/ProjectPage";
+import { Button, IntroText, Navbar } from "./components";
+import { Outlet } from "react-router-dom";
+import { HomePage,AboutMe,ProjectPage } from "./pages";
 
 function App() {
+  const [loader, setLoader] = useState(0)
+  const [showLoader, setShowLoader] = useState(true)
+  const introRef = useRef(null)
+  
+  useEffect(() => {
+    // const loaderCounter = document.querySelector(".loader")
+    const interval = setInterval(() => {
+      setLoader((prev) => {
+        if (prev >= 100) {
+          clearInterval(interval)
+          setTimeout(() => {
+            // loaderCounter.style.transform = "translateY(-100vh)"
+            setShowLoader(false)
+            // window.scrollTo({
+            //   top: introRef.current.offsetTop,
+            //   behavior:"smooth"
+            // })
+            introRef.current.scrollIntoView({behavior:"smooth"})
+          }, 1000);
+          return 100
+        }
+        return prev + 1
+      })
+    }, 20)
+    
+    return () => clearInterval(interval)
+  },[])
+
+
   useEffect(() => {
     document.documentElement.style.overflowX = "hidden";
     const introImage = document.querySelector(".introImage");
@@ -47,39 +75,27 @@ function App() {
   }, []);
 
   return (
-    <>
-      <div className="bg-[#72d2bb] overflow-x-hidden overflow-hidden font-montserrat">
+    <>  
+        {showLoader && ( <div className={`h-screen flex items-center justify-center lg:items-end lg:justify-end bg-[#2d2d38] text-gray-600 font-montserrat loader transition-transform duration-700 `}>
+          <div className="p-10 text-9xl font-bold">
+            <h1>{loader}%</h1>
+          </div>
+        </div>)}
+      <div ref={introRef} className="overflow-x-hidden overflow-hidden bg-[#72d2bb]">
         {/* NavBar */}
-        <div></div>
-        {/* Introduction */}
-        <div className="h-screen flex flex-col justify-center mt-36 gap-28 items-center">
-          <div className="flex-1 flex justify-center pt-20 items-center introText">
-            <IntroText />
-          </div>
-          <div className="flex-1 flex justify-center introImage">
-            <img src={downArrow} alt="" className="h-28" />
-          </div>
+        <div className="flex justify-center my-4 z-50">
+          <Navbar/>
         </div>
+        <HomePage/>
+        <ProjectPage />
+        <AboutMe/>
         {/* name container */}
         {/* <div className="h-screen bg-slate-600 flex items-center">
           <h2 className="text-[20vw] text-gray-500 cursor-default myName">{`I'm Amit`}</h2>
         </div> */}
         {/* job tittle container */}
-        <div className="h-screen bg-[#4b7fcd] bg-custom-bg2 bg-blend-soft-light jobTitleContainerOne">
-          <h2 className="text-[8vw] text-white h-screen flex items-center jobTitleOne">
-            a Web Developer
-          </h2>
-        </div>
-        <div className="h-screen bg-[#405782] bg-custom-bg1 bg-blend-multiply jobTitleContainerTwo">
-          <h2 className="text-[8vw] text-white h-screen px-4 flex items-center justify-center jobTitleTwo">
-            and UI/UX Designer
-          </h2>
-        </div>
       </div>
       {/*Projects*/}
-      <div className="">
-        <ProjectPage/>
-      </div>
     </>
   );
 }
