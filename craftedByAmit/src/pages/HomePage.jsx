@@ -8,10 +8,10 @@ function HomePage() {
         <div id="home">
             <div className="h-screen flex justify-center items-center overflow-hidden relative">
                 <div className="bg-white bg-opacity-15 backdrop-blur-2xl w-3/4 h-2/3 inset-0 rounded-lg shadow-lg z-10 top-[6%] left-[12%] absolute"></div>
-                <div className="bg-slate-600 absolute rounded-full w-[20%] h-[36%] top-[50%] right-[75%] z-0"></div>
-                <div className="bg-slate-600 absolute rounded-full w-[20%] h-[36%] top-[20%] right-[5%] z-0"></div>
-                <div className="bg-slate-600 absolute rounded-full w-[20%] h-[36%] top-[12%] right-[45%] z-0"></div>
-                <div className="bg-slate-600 absolute rounded-full w-[20%] h-[36%] top-[80%] right-[15%] z-0"></div>
+                <div className="bg-[#4b7fcd] absolute rounded-full w-[25%] h-[44%] top-[50%] right-[75%] z-0"></div>
+                <div className="bg-[#405782] absolute rounded-full w-[18%] h-[30%] top-[20%] right-[5%] z-0"></div>
+                <div className="bg-[#405782] absolute rounded-full w-[20%] h-[36%] top-[12%] right-[45%] z-0"></div>
+                <div className="bg-[#4b7fcd] absolute rounded-full w-[40%] h-[70%] top-[80%] right-[15%] z-0"></div>
                 <div className="flex-1 flex flex-col justify-center items-center text-center gap-64 z-20">
                 <div className="introText">
                     <IntroText />

@@ -11,7 +11,7 @@ function AboutMe() {
             <img
             src={myImage}
             alt="Seamless"
-            className="absolute top-1/2 lg:left-1/3 h-[300vh] hover:scale-125 lg:w-full object-cover transform -translate-y-1/2 "
+            className="absolute top-1/2 lg:left-1/3 h-[300vh] hover:scale-105 lg:w-full object-cover transform -translate-y-1/2 "
             />
             {/* Part One */}
             <div className="h-screen flex-1 flex items-center justify-start pl-8 mr-[40rem]">

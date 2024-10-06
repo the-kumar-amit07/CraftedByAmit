@@ -28,7 +28,7 @@ function Navbar() {
                                 to={item.id}
                                 smooth={true}
                                 duration={500}
-                                className='text-lg text-white font-oswald font-normal cursor-pointer'
+                                className='text-lg text-white font-oswald font-normal hover:scale-110 cursor-pointer'
                             >
                                 {item.name}
                             </Link>

@@ -82,20 +82,13 @@ function App() {
           </div>
         </div>)}
       <div ref={introRef} className="overflow-x-hidden overflow-hidden bg-[#72d2bb]">
-        {/* NavBar */}
         <div className="flex justify-center my-4 z-50">
           <Navbar/>
         </div>
         <HomePage/>
         <ProjectPage />
         <AboutMe/>
-        {/* name container */}
-        {/* <div className="h-screen bg-slate-600 flex items-center">
-          <h2 className="text-[20vw] text-gray-500 cursor-default myName">{`I'm Amit`}</h2>
-        </div> */}
-        {/* job tittle container */}
       </div>
-      {/*Projects*/}
     </>
   );
 }
