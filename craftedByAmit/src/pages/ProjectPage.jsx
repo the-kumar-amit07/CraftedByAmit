@@ -1,11 +1,27 @@
     /* eslint-disable no-unused-vars */
-import React from "react";
+import React,{useEffect} from "react";
 import Laptop from "../assets/apple macbook pro laptop mockup.png";
 import quirknest from "../assets/screencapture QuirkNest.png";
 import timetracer from "../assets/screencapture TimeTracer.png";
 import { Button } from "../components";
 
 function ProjectPage() {
+
+    useEffect(() => {
+        document.documentElement.style.overflowX = "hidden";
+        const laptopOne = document.querySelector(".laptopOne");
+        const laptopTwo = document.querySelector(".laptopTwo");
+        const handleScroll = () => {
+            let offSetY = window.scrollY;
+    
+            laptopOne.style.transform = `translateX(calc(-430vh + ${offSetY}px))`;
+            laptopTwo.style.transform = `translateX(calc(580vh - ${offSetY}px))`;
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+        }, []);
     return (
         <div id="projects" className="flex flex-col bg-[#f0f4f9] gap-[30vw] projects">
         <h2 className="text-[10vw] text-gray-500 p-7 font-oswald  projectTitle">
@@ -29,7 +45,7 @@ function ProjectPage() {
                 nulla optio at aliquam impedit recusandae! Porro.
             </p>
             {/* Button */}
-            <Button className="" bgcolor="#2d2d38" textColor="#f0f4f9">
+            <Button className="" bgcolor="#bb4625" textColor="#f0f4f9">
                 Live Demo
             </Button>
             </div>
@@ -52,7 +68,7 @@ function ProjectPage() {
                 nulla optio at aliquam impedit recusandae! Porro.
             </p>
             {/* Button */}
-            <Button className="" bgcolor="#2d2d38" textColor="#f0f4f9">
+            <Button className="" bgcolor="#bb4625" textColor="#f0f4f9">
                 Live Demo
             </Button>
             </div>

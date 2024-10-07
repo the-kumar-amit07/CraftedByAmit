@@ -19,6 +19,32 @@ export default {
       lineHeight: {
         '0': '0',
       },
+      keyframes: {
+        spinAndMove: {
+          '0%': { transform: 'translateX(0) translateY(0) rotate(0deg)' },
+          '25%': { transform: 'translateX(50px) translateY(0) rotate(90deg)' },
+          '50%': { transform: 'translateX(50px) translateY(50px) rotate(180deg)' },
+          '75%': { transform: 'translateX(0) translateY(50px) rotate(270deg)' },
+          '100%': { transform: 'translateX(0) translateY(0) rotate(360deg)' },
+        },
+        moveCircular: {
+          '0%': { transform: 'translateX(0) translateY(0)' },
+          '25%': { transform: 'translateX(100px) translateY(0)' },
+          '50%': { transform: 'translateX(100px) translateY(100px)' },
+          '75%': { transform: 'translateX(0) translateY(100px)' },
+          '100%': { transform: 'translateX(0) translateY(0)' },
+        },
+        bounceOnHover: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-30px)' },
+        },
+      },
+      animation: {
+        'spin-and-move': 'spinAndMove 4s linear infinite',
+        'move-circular': 'moveCircular 4s linear infinite',
+        'move-fast-circular': 'moveCircular 3s linear infinite',
+        'bounce-on-hover': 'bounceOnHover 1s ease-in-out',
+      },
     },
   },
   plugins: [],

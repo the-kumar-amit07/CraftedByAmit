@@ -84,7 +84,7 @@ function IntroText() {
     return (
         <div className='container font-oswald font-bold cursor-default'>
             <div className='text-wrapper'>
-                <h1 className='text-center  text-white text-[20vw]  leading-0 m-0'>Hello</h1>
+                <h1 className='text-center  text-white text-[20vw]  leading-0 m-0'>Hello!</h1>
                 <h1 className='text-center text-white text-[20vw]  leading-0 m-0'>I’m Amit</h1>
             </div>
         </div>
